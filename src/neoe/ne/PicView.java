@@ -247,7 +247,7 @@ public class PicView {
 			return files ;
 		}
 
-		private void setRate ( int x , int y , double r2 ) {
+		void setRate(int x, int y, double r2) {
 			vx = r2 / rate * ( vx - x ) + x ;
 			vy = r2 / rate * ( vy - y ) + y ;
 			rate = r2 ;
@@ -384,7 +384,7 @@ public class PicView {
 			}
 		}
 
-		private void setPosSmall ( int x , int y ) {
+		void setPosSmall(int x, int y) {
 			int [ ] s = getSwh ( ) ;
 			int w = s [ 2 ] ; // getWidth();
 			int h = s [ 3 ] ; // getHeight();
@@ -413,7 +413,7 @@ public class PicView {
 			repaint1 ( ) ;
 		}
 
-		private File nextSpFile ( ) {
+		File nextSpFile() {
 			while ( sfi . hasNext ( ) ) {
 				File f = sfi . next ( ) ;
 				if ( U . isImageFile ( f ) ) {
@@ -755,7 +755,7 @@ public class PicView {
 			} ) . start ( ) ;
 	}
 
-	private void installSlideshow2 ( JInternalFrame frame , PicViewPanel p ) {
+	void installSlideshow2(JInternalFrame frame, PicViewPanel p) {
 		ss = new Slideshow ( p ) ;
 		frame . addInternalFrameListener ( new InternalFrameListener ( ) {
 				@ Override

@@ -194,7 +194,6 @@ public class CommandPanel {
 
 					// Verify valid object detection
 					assert btn != null : "getInObj should return a valid object when mouse is over a button";
-				    assert btn == null : "getInObj returned a valid object when mouse is over a button";
 
 				return o ;
 			}
